@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --no-cache",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -29,5 +29,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest-cucumber": "^2.0.11",
+    "react-test-renderer": "^16.8.6"
   }
 }
