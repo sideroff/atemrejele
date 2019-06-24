@@ -1,6 +1,6 @@
+import React from 'react'
 import { defineFeature, loadFeature } from 'jest-cucumber'
 import TestRenderer from 'react-test-renderer'
-import path from 'path'
 
 import Header from './Header'
 
@@ -12,8 +12,8 @@ const feature = loadFeature(featurePath)
 defineFeature(feature, test => {
   test('Showing the Header', ({ given, when, then }) => {
     given('I have access to the application', () => {
-      const component = TestRenderer.create(Header)
-      console.log('header json ', JSON.stringify(component))
+      const component = TestRenderer.create(<Header />)
+      console.log('header json ', compoennt.toJSON())
     })
 
     when('I open the application on a any page', () => {
