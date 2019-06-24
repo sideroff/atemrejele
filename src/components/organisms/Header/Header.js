@@ -26,8 +26,12 @@ const Ticket = styled.div`
     padding-bottom: 5px;
   }
 `
-
-
+// TODO: make it like
+// |   |
+// |   |
+//  \ / 
+//   v   
+// so it can come down as an animation when hovered
 export default function Header() {
 
   return (

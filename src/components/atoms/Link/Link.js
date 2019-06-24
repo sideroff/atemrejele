@@ -10,9 +10,11 @@ const Link = props => <NavLink {...props} activeClassName='active' />
 export default styled(Link)`
   text-decoration: none;
   color: ${white};
-  font-weight: bold;
+  font-weight: 550;
+  transition: font-weight 0.3s, color 0.3s, margin 0.3s;
 
-  &.active {
+  &:hover, &.active {
     color: ${primaryColor};
+    font-weight: 900;
   }
 `
