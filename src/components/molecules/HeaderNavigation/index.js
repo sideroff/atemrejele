@@ -1,1 +1,3 @@
-export default './HeaderNavigation'
+import HeaderNavigation from './HeaderNavigation'
+
+export default HeaderNavigation

@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom'
-import { headerLinks } from 'config'
+import React from 'react'
+
+import { Link } from 'components/atoms'
+
+import { headerLinks } from 'utils/config'
+
 
 export default function HeaderNavigation() {
-  console.log('HeaderNavigation render')
+  console.log('HeaderNavigation render ', headerLinks)
 
-  return headerLinks.map(({ href, label }) => (
-    <Link to={href}>{label}</Link>
+  return headerLinks.map(({ url, exact, label }) => (
+    <Link to={url} exact={exact} >{label}</Link>
   ))
 }
