@@ -15,7 +15,7 @@ export default function Router() {
 
       <Switch>
         {pages.map(({ exact, url, component }) =>
-          <Route exact={exact} path={url} component={component} />
+          <Route exact={exact} path={url} component={component} key={url} />
         )}
       </Switch>
     </BrowserRouter>
