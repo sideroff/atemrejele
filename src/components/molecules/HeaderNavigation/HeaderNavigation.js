@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { Link } from 'components/atoms'
+import { HeaderLink } from 'components/atoms'
 
 import { headerLinks } from 'utils/config'
 import { primaryBackgroundColor } from 'utils/styleConfig'
@@ -15,7 +15,7 @@ const LinksWrapper = styled.div`
 
 const HeaderNavigation = () => (
   <LinksWrapper>
-    {headerLinks.map(({ url, exact, label }) => <Link to={url} exact={exact} key={url}>{label}</Link>)}
+    {headerLinks.map(({ url, exact, label }) => <HeaderLink to={url} exact={exact} key={url}>{label}</HeaderLink>)}
   </LinksWrapper>
 )
 

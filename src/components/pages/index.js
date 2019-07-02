@@ -1,11 +1,9 @@
 import Home from './Home'
-import Active from './Active'
-import InProgress from './InProgress'
-import Done from './Done'
+import Projects from './Projects'
+import Tasks from './Tasks'
 
 export {
   Home,
-  Active,
-  InProgress,
-  Done,
+  Projects,
+  Tasks,
 }

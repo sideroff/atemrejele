@@ -1,8 +1,7 @@
 import {
   Home,
-  Active,
-  InProgress,
-  Done,
+  Projects,
+  Tasks,
 } from 'components/pages'
 
 export const headerLinks = [
@@ -13,19 +12,14 @@ export const headerLinks = [
     exact: true,
   },
   {
-    url: '/active',
-    label: 'Active',
-    component: Active,
+    url: '/projects',
+    label: 'Projects',
+    component: Projects,
   },
   {
-    url: '/in-progress',
-    label: 'In progress',
-    component: InProgress,
-  },
-  {
-    url: '/done',
-    label: 'Done',
-    component: Done,
+    url: '/tasks',
+    label: 'Tasks',
+    component: Tasks,
   },
 ]
 
