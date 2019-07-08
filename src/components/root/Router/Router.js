@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 import { Header } from 'components/organisms'
-import { pages } from 'utils/config'
+import { pages } from 'config/config'
 
 export default function Router() {
   return (

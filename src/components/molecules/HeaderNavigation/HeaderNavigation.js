@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 
 import { HeaderLink } from 'components/atoms'
 
-import { headerLinks } from 'utils/config'
-import { primaryBackgroundColor } from 'utils/styleConfig'
+import { headerLinks } from 'config/config'
+import { primaryBackgroundColor } from 'config/styleConfig'
 
 const LinksWrapper = styled.div`
   display: flex;

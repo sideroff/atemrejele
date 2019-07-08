@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'components/atoms'
 import { HeaderNavigation } from 'components/molecules'
 import styled from '@emotion/styled'
-import { white, primaryColor } from 'utils/styleConfig'
+import { white, primaryColor } from 'config/styleConfig'
 
 const StickyHeader = styled.header`
   position: sticky;
