@@ -1,0 +1,1 @@
+export const SET_TEST_FLAG = 'SET_TEST_FLAG'
