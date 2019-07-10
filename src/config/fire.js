@@ -16,7 +16,8 @@ const firebaseConfig = {
   appId: '1:584723988743:web:8186c2173f733bc7'
 }
 
-// Initialize Firebase
-const fire = firebase.initializeApp(firebaseConfig)
-
-export default fire
+// Initialize default Firebase app
+// if we need another init
+// get handle by assigning the call to a var
+console.log('init fire app')
+firebase.initializeApp(firebaseConfig)

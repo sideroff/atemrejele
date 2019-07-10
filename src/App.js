@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { Provider, useDispatch } from 'react-redux'
+
 import { Router } from 'components/root'
+import { setTestFlag } from 'actions'
+import fire from 'config/fire'
+import store from './store'
 
 function App() {
-  const [counter, setCounter] = useState(0)
 
-  useEffect(() => {
-    console.log('here baby')
-    return () => console.log('cleanup baby')
-  },[])
+  React.useEffect(() => {
+    store.dispatch(setTestFlag(false))
+  }, [])
 
-  return <div>
-    {counter}
-    <button onClick={() => setCounter(counter + 1)}>Increment me!</button>
-
-  </div>
-
-  return <Router />
+  return (
+    <Provider store={store}>
+      <Router />
+    </Provider>
+  )
 }
 
 export default App

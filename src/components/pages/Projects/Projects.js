@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Projects() {
   return (
-    <div>Projects page</div>
+    <div>
+      <div>Projects page</div>
+    </div>
   )
 }

@@ -1,10 +1,19 @@
 import {
+  Authenticate,
   Home,
   Projects,
   Tasks,
 } from 'components/pages'
 
-export const headerLinks = [
+export const publicRoutes = [
+  {
+    url: '/authenticate',
+    label: 'Authenticate',
+    component: Authenticate
+  }
+]
+
+export const privateRoutes = [
   {
     url: '/',
     label: 'Home',
@@ -23,6 +32,9 @@ export const headerLinks = [
   },
 ]
 
+export const headerLinks = privateRoutes
+
 export const pages = [
-  ...headerLinks,
+  ...publicRoutes,
+  ...privateRoutes,
 ]
