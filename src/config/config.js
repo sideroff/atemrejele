@@ -1,3 +1,5 @@
+import { createBrowserHistory } from 'history'
+
 import {
   Authenticate,
   Home,
@@ -38,3 +40,5 @@ export const pages = [
   ...publicRoutes,
   ...privateRoutes,
 ]
+
+export const history = createBrowserHistory()

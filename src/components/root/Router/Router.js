@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {
-  BrowserRouter,
+  Router,
   Route,
   Switch,
 } from 'react-router-dom'
@@ -12,9 +12,9 @@ import { Authenticate } from 'components/pages'
 
 import { setTestFlag } from 'actions'
 
-import { publicRoutes, privateRoutes } from 'config/config'
+import { history, publicRoutes, privateRoutes } from 'config/config'
 
-export default function Router() {
+export default function _Router() {
   const dispatch = useDispatch()
 
   React.useEffect(() => {
@@ -24,7 +24,7 @@ export default function Router() {
   const privateRoutesFlag = useSelector(state => !!state.currentUser)
 
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Header />
 
       <Switch>
@@ -38,6 +38,6 @@ export default function Router() {
 
         <Route exact={true} path='/authenticate' component={Authenticate}/>
       </Switch>
-    </BrowserRouter>
+    </Router>
   )
 }
