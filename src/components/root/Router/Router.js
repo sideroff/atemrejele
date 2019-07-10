@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import {
   BrowserRouter,
   Route,
@@ -8,13 +8,20 @@ import {
 
 import { ProtectedRoute } from 'components/atoms'
 import { Header } from 'components/organisms'
-import { Authenticate } from 'components/pages';
+import { Authenticate } from 'components/pages'
+
+import { setTestFlag } from 'actions'
 
 import { publicRoutes, privateRoutes } from 'config/config'
 
 export default function Router() {
+  const dispatch = useDispatch()
 
-  const privateRoutesFlag = useSelector(state => state.flags.testFlag)
+  React.useEffect(() => {
+    dispatch(setTestFlag(false))
+  }, [dispatch])
+
+  const privateRoutesFlag = useSelector(state => !!state.currentUser)
 
   return (
     <BrowserRouter>

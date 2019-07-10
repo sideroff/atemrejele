@@ -1,5 +1,6 @@
 import {
-  SET_TEST_FLAG, LOGIN_REQUEST, LOGIN_REQUEST_SUCCESS
+  SET_TEST_FLAG,
+  AUTH_CHANGE,
 } from './actionTypes'
 
 export const setTestFlag = payload => dispatch => {
@@ -10,8 +11,6 @@ export const setTestFlag = payload => dispatch => {
   }, 1000)
 }
 
-export const login = payload => dispatch => {
-  dispatch({type: LOGIN_REQUEST, payload})
-
-  setTimeout(() => { dispatch({type: LOGIN_REQUEST_SUCCESS, payload: { username: 'niki' } }) })
+export const authChange = payload => dispatch => {
+  dispatch({type: AUTH_CHANGE, payload})
 }

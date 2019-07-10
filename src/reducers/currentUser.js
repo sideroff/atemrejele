@@ -1,16 +1,13 @@
 import {
-  LOGIN_REQUEST_SUCCESS,
-  LOGIN_REQUEST_FAILURE
+  AUTH_CHANGE
 } from 'actions/actionTypes'
 
-const defaultState = {
-  testFlag: false
-}
+const defaultState = null
 
 export default function flags(state = defaultState, action) {
   switch (action.type) {
-    case LOGIN_REQUEST_SUCCESS:
-      return { ...action.payload }
+    case AUTH_CHANGE:
+      return action.payload
     default:
       return state
   }

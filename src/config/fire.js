@@ -1,7 +1,9 @@
 // Firebase App (the core Firebase SDK) is always required and must be listed first
-import * as firebase from 'firebase/app'
 
-// Add the Firebase products that you want to use
+
+import firebase from 'firebase/app'
+
+// Add the Firebase products that you intend to use
 import 'firebase/auth'
 import 'firebase/firestore'
 
@@ -19,5 +21,13 @@ const firebaseConfig = {
 // Initialize default Firebase app
 // if we need another init
 // get handle by assigning the call to a var
-console.log('init fire app')
 firebase.initializeApp(firebaseConfig)
+
+export const firebaseUIConfig = {
+  signInSuccessUrl: '/',
+  signInOptions: [
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.GithubAuthProvider.PROVIDER_ID,
+  ],
+  tosUrl: '/terms-of-service',
+}
