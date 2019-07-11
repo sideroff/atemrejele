@@ -12,7 +12,7 @@ import { Authenticate } from 'components/pages'
 
 import { setTestFlag } from 'actions'
 
-import { history, publicRoutes, privateRoutes } from 'config/config'
+import { history, publicRoutes, privateRoutes } from 'config/navigation'
 
 export default function _Router() {
   const dispatch = useDispatch()

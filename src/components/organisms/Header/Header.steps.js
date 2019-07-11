@@ -5,7 +5,7 @@ import { defineFeature, loadFeature } from 'jest-cucumber'
 import TestRenderer from 'react-test-renderer'
 
 import Header from './Header'
-import { headerLinks } from 'config/config'
+import { headerLinks } from 'config/navigation'
 
 const featureFileName = 'Header.feature'
 const featurePath = require('path').resolve(__dirname, featureFileName)

@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 import { HeaderLink } from 'components/atoms'
 
-import { headerLinks } from 'config/config'
+import { headerLinks } from 'config/navigation'
 import { primaryBackgroundColor } from 'config/styleConfig'
 
 const LinksWrapper = styled.div`
