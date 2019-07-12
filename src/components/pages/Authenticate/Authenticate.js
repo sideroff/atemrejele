@@ -1,13 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import styled from '@emotion/styled'
 import { StyledFirebaseAuth } from 'react-firebaseui'
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 import 'firebase/auth'
 
 
 import { firebaseUIConfig } from 'config/fire'
-import { white, black } from 'config/styleConfig'
+import { white } from 'config/styleConfig'
 
 
 const Page = styled.div`
@@ -27,6 +26,7 @@ const AuthModal = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 40%;
+  min-height: 300px;
   min-width: 15%;
   border: 1px solid ${modalBorderColor};
   background-color: ${modalBackgroundColor};

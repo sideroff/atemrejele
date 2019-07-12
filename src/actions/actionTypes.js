@@ -1,4 +1,3 @@
-export const SET_TEST_FLAG = 'SET_TEST_FLAG'
 
 export const AUTH_CHANGE = 'AUTH_CHANGE'
 export const LOGIN_REQUEST = 'LOGIN_REQUEST'

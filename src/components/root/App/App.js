@@ -1,24 +1,28 @@
 import React, { useEffect } from 'react'
-import { Provider } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import firebase from 'firebase/app'
+import 'firebase/auth'
+
 
 import { Router } from 'components/root'
+import { AppLoadingOverlay } from 'components/molecules'
 import 'config/fire'
 
 import { authChange } from 'actions'
-import store from 'config/store'
 
 function App() {
+  const dispatch = useDispatch()
+
+  const isAppInitialized = useSelector(state => state.flags.firebaseInitialLoad)
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => store.dispatch(authChange(user)))
-  }, [])
+    firebase.auth().onAuthStateChanged(user => dispatch(authChange(user)))
+  }, [dispatch])
 
-  return (
-    <Provider store={store}>
-      <Router />
-    </Provider>
-  )
+
+  return isAppInitialized
+  ? <Router />
+  : <AppLoadingOverlay />
 }
 
 export default App

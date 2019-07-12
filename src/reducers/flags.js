@@ -1,13 +1,13 @@
-import { SET_TEST_FLAG } from 'actions/actionTypes'
+import { AUTH_CHANGE } from 'actions/actionTypes'
 
 const defaultState = {
-  testFlag: false
+  firebaseInitialLoad: false
 }
 
 export default function flags(state = defaultState, action) {
   switch (action.type) {
-    case SET_TEST_FLAG:
-      return {...state, testFlag: action.payload}
+    case AUTH_CHANGE:
+      return {...state, firebaseInitialLoad: true}
     default:
       return state
   }
