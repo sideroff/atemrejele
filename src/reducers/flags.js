@@ -7,7 +7,7 @@ const defaultState = {
 export default function flags(state = defaultState, action) {
   switch (action.type) {
     case AUTH_CHANGE:
-      return {...state, firebaseInitialLoad: true}
+      return {...state, firebaseInitialLoad: false}
     default:
       return state
   }

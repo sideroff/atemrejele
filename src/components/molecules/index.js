@@ -7,5 +7,5 @@ export {
   AppLoadingOverlay,
   BackgroundElement,
   CenteredPage,
-  HeaderNavigation,
+  HeaderNavigation
 }

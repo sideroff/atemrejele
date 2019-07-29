@@ -1,6 +1,8 @@
-import React from 'react'
+import styled from '@emotion/styled'
 
-import { Page } from 'components/atoms'
-import { BackgroundElement, CenteredPage } from 'components/molecules'
+import CenteredPage from '../CenteredPage'
 
-export default () => <Page /> //<BackgroundElement component={CenteredPage}/>
+export default styled(CenteredPage)`
+  background-image: url('/img/login_background.jpeg');
+  background-size: cover;
+`
