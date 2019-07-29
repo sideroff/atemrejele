@@ -20,6 +20,5 @@ export default styled(Link)`
 
   &:hover, &.active {
     color: ${primaryColor};
-    font-weight: 900;
   }
 `

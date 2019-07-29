@@ -1,8 +1,6 @@
-import React from 'react'
 import styled from '@emotion/styled'
 
 import { Page } from 'components/atoms'
-
 
 export default styled(Page)`
   display: flex;

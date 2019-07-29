@@ -4,20 +4,11 @@ import { StyledFirebaseAuth } from 'react-firebaseui'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
+import { BackgroundCenteredPage } from 'components/molecules'
 
 import { firebaseUIConfig } from 'config/fire'
 import { white } from 'config/styleConfig'
 
-
-const Page = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-image: url('/img/login_background.jpeg');
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-`
 const modalBackgroundColor = 'rgba(20, 14, 14, 0.4)'
 const modalBorderColor = 'rgba(20, 14, 14, 0.5)'
 
@@ -40,10 +31,10 @@ const ModalHeading = styled.h3`
 `
 
 export default () => (
-  <Page>
+  <BackgroundCenteredPage>
     <AuthModal>
         <ModalHeading>Atemrejele</ModalHeading>
         <StyledFirebaseAuth uiConfig={firebaseUIConfig} firebaseAuth={firebase.auth()}/>
     </AuthModal>
-  </Page>
+  </BackgroundCenteredPage>
 )

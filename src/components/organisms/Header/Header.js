@@ -1,8 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import styled from '@emotion/styled'
 
 import { Link } from 'components/atoms'
 import { HeaderNavigation } from 'components/molecules'
-import styled from '@emotion/styled'
 import { white, primaryColor } from 'config/styleConfig'
 
 const StickyHeader = styled.header`
@@ -32,7 +33,6 @@ const Ticket = styled.div`
   }
 `
 
-
 // TODO: make it like
 // |   |
 // |   |
@@ -40,7 +40,11 @@ const Ticket = styled.div`
 //   v   
 // so it can come down as an animation when hovered
 export default function Header() {
-  return (
+
+  const currentUser = useSelector(state => state.currentUser)
+
+  return currentUser
+  ? (
     <StickyHeader>
       <Link to='/'>
         <Ticket />
@@ -48,4 +52,5 @@ export default function Header() {
       <HeaderNavigation />
     </StickyHeader>
   )
+  : null
 }

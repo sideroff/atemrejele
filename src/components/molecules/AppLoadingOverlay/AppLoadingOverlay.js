@@ -1,8 +1,9 @@
-import styled from '@emotion/styled'
+import React from 'react'
 
-import CenteredPage from '../CenteredPage'
+import { Spinner } from 'components/atoms'
+import BackgroundCenteredPage from '../BackgroundCenteredPage'
 
-export default styled(CenteredPage)`
-  background-image: url('/img/login_background.jpeg');
-  background-size: cover;
-`
+export default () =>
+  <BackgroundCenteredPage>
+    <Spinner/>
+  </BackgroundCenteredPage>

@@ -1,11 +1,11 @@
 import AppLoadingOverlay from './AppLoadingOverlay'
-import BackgroundElement from './BackgroundElement'
+import BackgroundCenteredPage from './BackgroundCenteredPage'
 import CenteredPage from './CenteredPage'
 import HeaderNavigation from './HeaderNavigation'
 
 export {
   AppLoadingOverlay,
-  BackgroundElement,
+  BackgroundCenteredPage,
   CenteredPage,
   HeaderNavigation
 }
