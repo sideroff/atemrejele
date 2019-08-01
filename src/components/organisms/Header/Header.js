@@ -9,7 +9,6 @@ import { white, primaryColor } from 'config/styleConfig'
 const StickyHeader = styled.header`
   position: sticky;
 `
-
 const Ticket = styled.div`
   position: absolute;
   width: 40px;

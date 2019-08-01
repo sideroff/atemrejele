@@ -6,7 +6,7 @@ import { FaUserCircle, FaSignOutAlt } from 'react-icons/fa'
 import { HeaderLink } from 'components/atoms'
 
 import { headerLinks } from 'config/navigation'
-import { primaryBackgroundColor, primaryColor0, primaryColorLight2 } from 'config/styleConfig'
+import { primaryBackgroundColor, primaryColor, primaryColorLight2, fromDesktopDown } from 'config/styleConfig'
 
 
 import { logoutAction } from 'actions'
@@ -18,6 +18,10 @@ const Wrapper = styled.div`
   padding: 0.5em 0 0.5em 0;
   background-color: ${primaryBackgroundColor};
   color: white;
+
+  ${fromDesktopDown} {
+    justify-content: flex-end;
+  }
 `
 
 const LinksWrapper = styled.div`
@@ -25,6 +29,10 @@ const LinksWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  ${fromDesktopDown} {
+    display: none;
+  }
 `
 
 const ProfileWrapper = styled.div`
@@ -32,7 +40,7 @@ const ProfileWrapper = styled.div`
 
   &:hover, &:active {
     & > .icon {
-      color: ${primaryColor0};
+      color: ${primaryColor};
     }
 
     & > .dropdown {
@@ -40,7 +48,6 @@ const ProfileWrapper = styled.div`
     }
   }
 `
-
 const ProfileIcon = styled(FaUserCircle)`
   cursor: pointer;
   color: white;

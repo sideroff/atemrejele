@@ -1,9 +1,12 @@
 import { createBrowserHistory } from 'history'
 
+import i18n from 'i18n'
+
 import {
   Authenticate,
   Home,
   Projects,
+  ProjectsCreate,
   Tasks,
 } from 'components/pages'
 
@@ -18,23 +21,34 @@ export const publicRoutes = [
 export const privateRoutes = [
   {
     url: '/',
-    label: 'Home',
+    label: i18n.t('home'),
     component: Home,
     exact: true,
+    showInNav: true,
   },
   {
     url: '/projects',
-    label: 'Projects',
+    label: i18n.t('projects'),
     component: Projects,
+    exact: true,
+    showInNav: true,
+  },
+  {
+    url: '/projects/create',
+    label: i18n.t('projects-create'),
+    component: ProjectsCreate,
+    exact: true
   },
   {
     url: '/tasks',
-    label: 'Tasks',
+    label: i18n.t('tasks'),
     component: Tasks,
+    exact: true,
+    showInNav: true,
   },
 ]
 
-export const headerLinks = privateRoutes
+export const headerLinks = privateRoutes.filter(pr => pr.showInNav)
 
 export const pages = [
   ...publicRoutes,

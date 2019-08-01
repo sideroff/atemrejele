@@ -1,7 +1,8 @@
 import { AUTH_CHANGE } from 'actions/actionTypes'
 
 const defaultState = {
-  firebaseInitialLoad: false
+  firebaseInitialLoad: false,
+  themeName: 'default'
 }
 
 export default function flags(state = defaultState, action) {
