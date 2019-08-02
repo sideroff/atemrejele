@@ -10,6 +10,7 @@ export const accentColor = '#03E7C6'
 export const spinnerColor = white
 
 export const primaryBlackColor = 'rgba(20, 14, 14, 1)'
+export const primaryBlackWithOpacity = opacity => `rgba(20, 14, 14, ${opacity})`
 
 export const primaryColor = 'rgba(222, 83, 61,1)'
 export const primaryColorLight1 = 'rgba(248,121,101,1)'
@@ -47,3 +48,6 @@ export const fromDesktopUp = '@media (min-width: 1200px)'
 
 export const fromBigDesktopDown = '@media (min-width: 1799px)'
 export const fromBigDesktopUp = '@media (min-width: 1800px)'
+
+export const pink = '#EAAFDD'
+export const pinkWithOpacity = opacity => `rgb(234, 175, 221, ${opacity})`

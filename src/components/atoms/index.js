@@ -8,7 +8,7 @@ import Link from './Link'
 import Logo from './Logo'
 import Page from './Page'
 import ProtectedRoute from './ProtectedRoute'
-import Spinner from './Spinner'
+import { Spinner, CenteredSpinner }from './Spinner'
 import Textarea from './Textarea'
 
 export {
@@ -23,5 +23,6 @@ export {
   Page,
   ProtectedRoute,
   Spinner,
+  CenteredSpinner,
   Textarea,
 }

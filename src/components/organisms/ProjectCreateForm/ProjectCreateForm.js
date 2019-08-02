@@ -6,16 +6,12 @@ import { Input, Textarea, Button, FieldGroup, ActionGroup, Label } from 'compone
 import { randomIntByMinMax, projectNamePlaceholders } from 'utils'
 import i18n from 'i18n'
 
-const ProjectCreateForm = ({ handleSubmit, className }) => {
+const ProjectCreateForm = ({ handleSubmit, onSubmit, className }) => {
 
   const [randomPlaceholderIndex] = useState(randomIntByMinMax(0, projectNamePlaceholders.length -1))
 
-  const loginUser = values => {
-    console.log('submit bby, ', values)
-  }
-
   return (
-    <form className={className} onSubmit={handleSubmit(loginUser)}>
+    <form className={className} onSubmit={handleSubmit(onSubmit)}>
       <FieldGroup>
         <Label htmlFor='name'>{i18n.t('name')}</Label>
         <Field name='name' component={Input} type='text' placeholder={projectNamePlaceholders[randomPlaceholderIndex] + '...'} />

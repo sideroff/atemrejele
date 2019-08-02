@@ -14,6 +14,7 @@ import { history, publicRoutes, privateRoutes } from 'config/navigation'
 
 export default function _Router() {
   const privateRoutesFlag = useSelector(state => !!state.currentUser)
+  console.log('router render')
 
   return (
     <Router history={history}>
